@@ -1,0 +1,18 @@
+{
+  "exported_content_pages_checked": 1068,
+  "generated_subpage_routes": 1067,
+  "sitemap_urls": 1064,
+  "metadata_and_heading_issues": [],
+  "broken_internal_links": {},
+  "missing_local_images": {},
+  "browser_checks": {
+    "desktop_and_mobile_layout": "passed",
+    "mobile_menu": "passed",
+    "location_and_price_filter": "Stuart, maximum $750,000 returns 1680 SW Belgrave Terrace",
+    "saved_homes": "save, reopen saved page, and remove passed",
+    "agent_directory_search": "Todd Murphy found",
+    "mortgage_zero_interest": "$520,000 / 360 + $500 taxes + $250 insurance = $2,194 rounded monthly",
+    "enquiry_review": "validated synthetic input, prepared email, no email sent",
+    "console_errors": "none in checked flows"
+  }
+}

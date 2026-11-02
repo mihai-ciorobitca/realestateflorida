@@ -1,0 +1,16 @@
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://real-estate-florida-reimagined.peptiking.chatgpt.site';
+export const MLS = 'https://search.realestateofflorida.com';
+export const featured = [
+  { id:'eugenia',price:1700000,address:'121 Queen Eugenia Court',city:'Hutchinson Island',beds:4,baths:4,sqft:2978,image:'/images/eugenia.jpg',tag:'ISLAND LIVING',href:MLS+'/bmls/1-RX-11080195/121-QUEEN-EUGENIA-COURT-Hutchinson-Island' },
+  { id:'jennifer',price:1650000,address:'1070 SW Jennifer Terrace',city:'Port St. Lucie',beds:3,baths:2,sqft:1777,image:'/images/jennifer.jpg',tag:'FEATURED RESIDENCE',href:MLS+'/bmls/1-RX-11102720/1070-SW-JENNIFER-TERRACE-Port-Saint-Lucie' },
+  { id:'belgrave',price:615000,address:'1680 SW Belgrave Terrace',city:'Stuart',beds:3,baths:2,sqft:2046,image:'/images/belgrave.jpg',tag:'TREASURE COAST',href:MLS+'/bmls/1-RX-11099462/1680-SW-BELGRAVE-TERRACE-Stuart' },
+];
+export const nav = [
+  { label:'Find a home',href:'/custom-search',items:[['All property searches','/custom-search'],['Featured properties','/all-listings'],['Search by city','/the-area'],['Search by county','/counties'],['Neighborhoods','/neighborhood-results.php'],['New construction','/new-construction'],['Luxury homes',MLS+'/search/results/luxury-listings'],['Waterfront homes',MLS+'/search/results/waterfront-homes'],['Condos',MLS+'/search/results/condo-home-listings'],['55+ living','https://realestate.realestateofflorida.com/search/results/55-plus-community-homes-for-sale'],['Vacant land',MLS+'/search/results/Vacant-land-for-sale'],['Central & Southwest Florida','https://realestate.realestateofflorida.com/'],['Vero Beach & Sebastian','https://homes.realestateofflorida.com/idx/search/advanced']] },
+  { label:'Explore Florida',href:'/the-area',items:[['All communities','/the-area'],['Stuart','/area/stuart'],['Port St. Lucie','/area/port-st-lucie'],['Jensen Beach','/area/jensen-beach'],['Palm City','/area/palm-city'],['Jupiter','/area/jupiter'],['Hobe Sound','/area/Hobe-Sound'],['Palm Beach Gardens','/area/Palm-Beach-Gardens'],['Martin County','/martin-county'],['Indian River County','/indian-river-county']] },
+  { label:'Buy',href:'/buyers',items:[['Buyer resources','/buyers'],['The buying process','/home-buying-process'],['First-time buyers','/first-time-home-buyers'],['Mortgage calculator','/mortgage'],['Listing alerts','/instant-alerts'],['New construction','/new-construction']] },
+  { label:'Sell',href:'/sellers',items:[['Sell your home','/sellers'],['Get a home valuation','/form-cma'],['List your property','/form-list-your-home'],['Neighborhood sold report','/form-neighborhood-sold-report']] },
+  { label:'Our story',href:'/contact',items:[['About & contact','/contact'],['Meet the team','/staff.php'],['Join our team','/team'],['Client stories','/testimonial.php'],['Our partners','/business-category.php']] },
+];
+export function localHref(href:string){try{const u=new URL(href);if(/\.(pdf|jpe?g|png|zip|docx?)$/i.test(u.pathname))return href;return u.hostname==='www.realestateofflorida.com'||u.hostname==='realestateofflorida.com'?u.pathname+u.search+u.hash:href;}catch{return href;}}
+export const money = (v:number)=> new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(v);
